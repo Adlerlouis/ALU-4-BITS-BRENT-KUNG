@@ -1,0 +1,85 @@
+********************************************************************************
+Product   : Virtuoso(R) XStream In
+Program   : @(#)$CDS: strmin version 6.1.8-64b 01/30/2024 20:01 (cpgbld02) $
+          : sub-version  IC6.1.8-64b.500.35 
+Started at: 05-Dec-2024  21:53:49
+User Name : al-labse15
+Host Name : ccslvcbasselic
+Directory : /home/al-labse15/SumadorBrentKung
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+INFO (XSTRM-217): Reading the layer map file, /home/al-labse15/SumadorBrentKung/streamOut.map
+
+Summary of Options:
+	library				SumadorKKK
+	strmFile			/home/al-labse15/SumadorBrentKung/fsm1.gds
+	logFile				strmIn.log
+	view				layout
+	case				Preserve
+	layerMap			/home/al-labse15/SumadorBrentKung/streamOut.map
+	propSeparator			,
+
+WARNING (XSTRM-267): The referenced cell "FILL" was not found. The OpenAccess design data was created for this cell without any reference. Ensure that the referenced cell exists and library is defined in the cds.lib file.
+WARNING (XSTRM-267): The referenced cell "HAX1" was not found. The OpenAccess design data was created for this cell without any reference. Ensure that the referenced cell exists and library is defined in the cds.lib file.
+WARNING (XSTRM-267): The referenced cell "OR2X1" was not found. The OpenAccess design data was created for this cell without any reference. Ensure that the referenced cell exists and library is defined in the cds.lib file.
+WARNING (XSTRM-267): The referenced cell "XNOR2X1" was not found. The OpenAccess design data was created for this cell without any reference. Ensure that the referenced cell exists and library is defined in the cds.lib file.
+INFO (XSTRM-220): 1. Translating STRUCTURE M2_M1_viaC as cellView SumadorKKK/M2_M1_viaC/layout.
+INFO (XSTRM-61): Creating a new layer metal1 in the technology file.
+INFO (XSTRM-60): Creating a new purpose VIA in the technology file.
+INFO (XSTRM-62): Creating a new layer-purpose pair 'metal1:VIA' in the technology file.
+INFO (XSTRM-61): Creating a new layer metal2 in the technology file.
+INFO (XSTRM-62): Creating a new layer-purpose pair 'metal2:VIA' in the technology file.
+INFO (XSTRM-61): Creating a new layer via1 in the technology file.
+INFO (XSTRM-62): Creating a new layer-purpose pair 'via1:VIA' in the technology file.
+INFO (XSTRM-220): 2. Translating STRUCTURE M3_M2_via as cellView SumadorKKK/M3_M2_via/layout.
+INFO (XSTRM-61): Creating a new layer metal3 in the technology file.
+INFO (XSTRM-62): Creating a new layer-purpose pair 'metal3:VIA' in the technology file.
+INFO (XSTRM-61): Creating a new layer via2 in the technology file.
+INFO (XSTRM-62): Creating a new layer-purpose pair 'via2:VIA' in the technology file.
+INFO (XSTRM-220): 3. Translating STRUCTURE M2_M1_viaB as cellView SumadorKKK/M2_M1_viaB/layout.
+INFO (XSTRM-220): 4. Translating STRUCTURE M3_M2_viaC as cellView SumadorKKK/M3_M2_viaC/layout.
+INFO (XSTRM-220): 5. Translating STRUCTURE M2_M1_via as cellView SumadorKKK/M2_M1_via/layout.
+INFO (XSTRM-220): 6. Translating STRUCTURE Sumador_BK_VIA0 as cellView SumadorKKK/Sumador_BK_VIA0/layout.
+INFO (XSTRM-220): 7. Translating STRUCTURE Sumador_BK as cellView SumadorKKK/Sumador_BK/layout.
+INFO (XSTRM-61): Creating a new layer DIEAREA in the technology file.
+INFO (XSTRM-60): Creating a new purpose ALL in the technology file.
+INFO (XSTRM-62): Creating a new layer-purpose pair 'DIEAREA:ALL' in the technology file.
+INFO (XSTRM-61): Creating a new layer NAME in the technology file.
+INFO (XSTRM-60): Creating a new purpose COMP in the technology file.
+INFO (XSTRM-62): Creating a new layer-purpose pair 'NAME:COMP' in the technology file.
+INFO (XSTRM-61): Creating a new layer COMP in the technology file.
+INFO (XSTRM-62): Creating a new layer-purpose pair 'COMP:ALL' in the technology file.
+INFO (XSTRM-60): Creating a new purpose metal1/PIN in the technology file.
+INFO (XSTRM-62): Creating a new layer-purpose pair 'NAME:metal1/PIN' in the technology file.
+INFO (XSTRM-60): Creating a new purpose metal1/NET in the technology file.
+INFO (XSTRM-62): Creating a new layer-purpose pair 'NAME:metal1/NET' in the technology file.
+INFO (XSTRM-60): Creating a new purpose NET in the technology file.
+INFO (XSTRM-62): Creating a new layer-purpose pair 'metal1:NET' in the technology file.
+INFO (XSTRM-62): Creating a new layer-purpose pair 'metal2:NET' in the technology file.
+INFO (XSTRM-62): Creating a new layer-purpose pair 'metal3:NET' in the technology file.
+INFO (XSTRM-60): Creating a new purpose metal2/NET in the technology file.
+INFO (XSTRM-62): Creating a new layer-purpose pair 'NAME:metal2/NET' in the technology file.
+INFO (XSTRM-60): Creating a new purpose metal3/NET in the technology file.
+INFO (XSTRM-62): Creating a new layer-purpose pair 'NAME:metal3/NET' in the technology file.
+INFO (XSTRM-60): Creating a new purpose metal2/SPNET in the technology file.
+INFO (XSTRM-62): Creating a new layer-purpose pair 'NAME:metal2/SPNET' in the technology file.
+INFO (XSTRM-60): Creating a new purpose SPNET in the technology file.
+INFO (XSTRM-62): Creating a new layer-purpose pair 'metal2:SPNET' in the technology file.
+INFO (XSTRM-62): Creating a new layer-purpose pair 'metal1:SPNET' in the technology file.
+
+Summary of Objects Translated:
+	Instances:                              68
+	Arrays:                                 0
+	Polygons:                               0
+	Paths:                                  44
+	PathSegs:                               0
+	Rectangles:                             3303
+	Text:                                   57
+	Node:                                   0
+	Line:                                   0
+	Cells:                                  7
+
+Elapsed Time: 0.2s   User Time: 0.1s   CPU Time: 0.0s   Peak VM: 76764KB  CPUs Used: 2
+INFO (XSTRM-234): Translation completed. '0' error(s) and '4' warning(s) found.

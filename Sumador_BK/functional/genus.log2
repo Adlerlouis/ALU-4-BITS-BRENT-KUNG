@@ -1,0 +1,254 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2023 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[17:07:47.059857] Configured Lic search path (21.01-s002): 5280@148.211.120.26
+
+Version: 21.18-s082_1, built Tue Jul 18 12:08:41 PDT 2023
+Options: 
+Date:    Thu Dec 05 17:07:47 2024
+Host:    ccslvcbasselic (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (1core*4cpus*7physical cpus*Intel(R) Xeon(R) Platinum 8268 CPU @ 2.90GHz 36608KB) (8008760KB)
+PID:     23405
+OS:      CentOS Linux release 7.9.2009 (Core)
+
+
+[17:07:47.203489] Periodic Lic check successful
+[17:07:47.203497] Feature usage summary:
+[17:07:47.203498] Genus_Synthesis
+Checking out license: Genus_Synthesis
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...
+Finished loading tool scripts (21 seconds elapsed).
+
+WARNING: This version of the tool is 506 days old.
+@genus:root: 1> read_lib ~/SumadorBrentKung/
+Error   : File error. [FILE-100] [::legacy::set_attribute]
+        : Cannot open file '~/SumadorBrentKung/'. File must not be a directory.
+        : Make sure that the file is a readable regular file and has the specified name.
+Error   : A library file does not exist. [LBR-68] [::legacy::set_attribute]
+        : File '~/SumadorBrentKung/' could not be found. File '<none>' was the last file that was successfully read in.
+        : Make sure that the library file exists or check for a typo in the file name.
+Error   : The data value for this attribute is invalid. [TUI-24] [::legacy::set_attribute]
+        : The value '  { ~/SumadorBrentKung/ } ' cannot be set for attribute 'library'.
+        : To see the usage/description for this attribute, type '::legacy::set_attribute -h <attr_name> *' (in legacy UI mode) or 'help * <attr_name> -detail' (in CUI mode).
+1
+@genus:root: 2> read_lib ~/SumadorBrentKung/Sumador_BK/functional/libCompleta.lib
+Error: cannot open file "~/SumadorBrentKung/Sumador_BK/functional/libCompleta.lib"
+
+Threads Configured:3
+Bad technology library ~/SumadorBrentKung/Sumador_BK/functional/libCompleta.lib.
+Error   : A library file does not have the correct format. [LBR-69] [::legacy::set_attribute]
+        : File '~/SumadorBrentKung/Sumador_BK/functional/libCompleta.lib' does not have the correct format. File '<none>' was the last file that was successfully read in.
+        : Check whether the file is corrupted or if it follows the .lib format.
+Error   : The data value for this attribute is invalid. [TUI-24] [::legacy::set_attribute]
+        : The value '  { ~/SumadorBrentKung/Sumador_BK/functional/libCompleta.lib } ' cannot be set for attribute 'library'.
+1
+@genus:root: 3> read_lib /home/al-labse15/SumadorBrentKung/Sumador_BK/functional/libCompleta.lib
+
+Threads Configured:3
+
+  Message Summary for Library libCompleta.lib:
+  ********************************************
+  Missing library level attribute. [LBR-516]: 1
+  ********************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.100000, 27.000000) in library 'libCompleta.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+@genus:root: 4> read_hdl /home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v
+@genus:root: 5> elaborate Sumador_BK
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'Sumador_BK' from file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v'.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'EI1' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 73.
+        : Check the kind of module a black box is. If it is a lib_cell or a macro, check why the corresponding .lib was not read in. This could be either due to a missing or faulty file or due to an incomplete init_lib_search_path attribute value making restricting access to the missing file. If it is a module of your design, verify whether the path to this module is a part of the files you read or else check that the init_hdl_search_path attribute is not missing some paths.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'buffer0' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 87.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'GC1' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 90.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'buffer1_2' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 92.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'BC3' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 103.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'GC3' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 104.
+Warning : In legacy_ui mode, Genus creates a blackbox as description for a module is not found. Black boxes represent unresolved references in the design and are usually not expected. Another possible reason is, some libraries are not read and the tool could not get the content for some macros or lib_cells. [CDFG-428]
+        : A blackbox was created for instance 'EF0' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 144.
+Warning : Undriven module output port. [ELABUTL-123]
+        : Undriven bits of output port 'sum' in module 'Sumador_BK' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 8, column 23, hid = 0.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'Sumador_BK'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'HalfAdder'.
+        : Run check_design to get all unresolved instance. To resolve the reference, either load a technology library containing the cell by appending to the 'library' attribute, or read in the hdl file containing the module before performing elaboration. As the design is incomplete, synthesis results may not correspond to the entire design.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'Buffer_Par'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'Gray_Cell_Impar'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'Buffer_Impar'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'Black_Cell_Impar'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'Gray_Cell_Par'.
+Warning : Black-boxes are represented as unresolved references in the design. [TUI-273]
+        : Cannot resolve reference to 'Estructura_Final'.
+Checking for analog nets...
+Check completed for analog nets.
+Checking for source RTL...
+Check completed for source RTL.
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+
+Stage: post_elab
+--------------------------------------------------------
+| Trick             | Accepts | Rejects | Runtime (ms) | 
+--------------------------------------------------------
+| ume_constant_bmux |       0 |       0 |         0.00 | 
+--------------------------------------------------------
+Starting clip mux common data inputs [v1.0] (stage: post_elab, startdef: Sumador_BK, recur: true)
+Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting clip the non-user hierarchies [v2.0] (stage: post_elab, startdef: Sumador_BK, recur: true)
+Completed clip the non-user hierarchies (accepts: 0, rejects: 0, runtime: 0.000s)
+
+Stage: post_elab
+---------------------------------------------------------
+| Transform          | Accepts | Rejects | Runtime (ms) | 
+---------------------------------------------------------
+| hlo_clip_mux_input |       0 |       0 |         0.00 | 
+| hlo_clip           |       0 |       0 |         0.00 | 
+---------------------------------------------------------
+UM:   flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   elaborate
+design:Sumador_BK
+@genus:root: 6> set_db design:Co_O .preserve true
+Error   : <Start> word is not recognized. [TUI-182] [set_db]
+        : 'design:Co_O' is not a recognized object/attribute. Type 'help root:' to get a list of all supported objects and attributes.
+        : Check if the given <Start> word is a valid object_type, object or attribute.
+1
+@genus:root: 7> set_db [get_db modules Co_*].boundry_opto stric_no
+Error   : <Start> word is not recognized. [TUI-182] [set_db]
+        : '.boundry_opto' is not a recognized object/attribute. Type 'help root:' to get a list of all supported objects and attributes.
+1
+@genus:root: 8> set_db [get_db modules Co_*].boundary_opto stric_no
+Error   : <Start> word is not recognized. [TUI-182] [set_db]
+        : '.boundary_opto' is not a recognized object/attribute. Type 'help root:' to get a list of all supported objects and attributes.
+1
+@genus:root: 9> set_db[get_db modules Co_*].boundary_opto stric_no
+invalid command name "set_db.boundary_opto"
+@genus:root: 10> set_db[get_db modules Co_*].boundary_opto stric_no
+invalid command name "set_db.boundary_opto"
+@genus:root: 11> set_db[get_db Sumador_BK Co_*].boundary_opto stric_no
+Error   : <Start> word is not recognized. [TUI-182] [get_db]
+        : 'Sumador_BK' is not a recognized object/attribute. Type 'help root:' to get a list of all supported objects and attributes.
+1
+@genus:root: 12> set_db[get_db modules Co_*].boundary_opto stric_no
+invalid command name "set_db.boundary_opto"
+@genus:root: 13> set_db get_db modules Co_*.boundary_opto stric_no
+Error   : A command argument did not match any of the acceptable command options. [TUI-64] [set_db]
+        : The argument in question is 'stric_no'.
+        : Check the command usage and correct the input to the command.
+  set_db: set attributes on objects 
+
+Usage: set_db [-quiet] [-verbose] [-dbu] [-index <string>] <string> <string> [<string>]
+
+    [-quiet]:
+        keeps quiet unless there are problems 
+    [-verbose]:
+        enables verbose 
+    [-dbu]:
+        indicates that attribute (coord, pt, rect, polygon, area, etc.) will be in database 
+        units 
+    [-index <string>]:
+        list of indices in a form of pairs of index_name value or a object name 
+    <string>:
+        <start> can be any object list (or collection) or <shorthand> (e.g., nets, insts, etc) 
+    <string>:
+        the <chain> is in the form [.<attribute_name1>[.<attribute_name2>]...] 
+    [<string>]:
+        the attribute value 
+1
+@genus:root: 14> set_db get_db modules Co_* -boundary_opto stric_no
+Error   : A command argument did not match any of the acceptable command options. [TUI-64] [set_db]
+        : The argument in question is '-boundary_opto'.
+  set_db: set attributes on objects 
+
+Usage: set_db [-quiet] [-verbose] [-dbu] [-index <string>] <string> <string> [<string>]
+
+    [-quiet]:
+        keeps quiet unless there are problems 
+    [-verbose]:
+        enables verbose 
+    [-dbu]:
+        indicates that attribute (coord, pt, rect, polygon, area, etc.) will be in database 
+        units 
+    [-index <string>]:
+        list of indices in a form of pairs of index_name value or a object name 
+    <string>:
+        <start> can be any object list (or collection) or <shorthand> (e.g., nets, insts, etc) 
+    <string>:
+        the <chain> is in the form [.<attribute_name1>[.<attribute_name2>]...] 
+    [<string>]:
+        the attribute value 
+1
+@genus:root: 15> set_db get_db.modules Co_* -boundary_opto stric_no
+Error   : A command argument did not match any of the acceptable command options. [TUI-64] [set_db]
+        : The argument in question is 'stric_no'.
+  set_db: set attributes on objects 
+
+Usage: set_db [-quiet] [-verbose] [-dbu] [-index <string>] <string> <string> [<string>]
+
+    [-quiet]:
+        keeps quiet unless there are problems 
+    [-verbose]:
+        enables verbose 
+    [-dbu]:
+        indicates that attribute (coord, pt, rect, polygon, area, etc.) will be in database 
+        units 
+    [-index <string>]:
+        list of indices in a form of pairs of index_name value or a object name 
+    <string>:
+        <start> can be any object list (or collection) or <shorthand> (e.g., nets, insts, etc) 
+    <string>:
+        the <chain> is in the form [.<attribute_name1>[.<attribute_name2>]...] 
+    [<string>]:
+        the attribute value 
+1
+@genus:root: 16> set_db get_db.modules Co_* -boundary_opto stric_no
+Error   : A command argument did not match any of the acceptable command options. [TUI-64] [set_db]
+        : The argument in question is 'stric_no'.
+  set_db: set attributes on objects 
+
+Usage: set_db [-quiet] [-verbose] [-dbu] [-index <string>] <string> <string> [<string>]
+
+    [-quiet]:
+        keeps quiet unless there are problems 
+    [-verbose]:
+        enables verbose 
+    [-dbu]:
+        indicates that attribute (coord, pt, rect, polygon, area, etc.) will be in database 
+        units 
+    [-index <string>]:
+        list of indices in a form of pairs of index_name value or a object name 
+    <string>:
+        <start> can be any object list (or collection) or <shorthand> (e.g., nets, insts, etc) 
+    <string>:
+        the <chain> is in the form [.<attribute_name1>[.<attribute_name2>]...] 
+    [<string>]:
+        the attribute value 
+1
+@genus:root: 17> exit
+
+Lic Summary:
+[17:20:58.215034] Cdslmd servers: ccslvcbasselic
+[17:20:58.215050] Feature usage summary:
+[17:20:58.215051] Genus_Synthesis
+
+Normal exit.

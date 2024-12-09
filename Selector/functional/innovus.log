@@ -1,0 +1,195 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v20.15-s105_1, built Tue Jul 27 14:15:35 PDT 2021
+Options:	
+Date:		Mon Dec  9 17:39:43 2024
+Host:		ccslvcbasselic (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (1core*4cpus*Intel(R) Xeon(R) Platinum 8268 CPU @ 2.90GHz 36608KB)
+OS:		CentOS Linux release 7.9.2009 (Core)
+
+License:
+		invs	Innovus Implementation System	20.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (15 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+<CMD> define_proc_arguments ViaFillQor -info {This procedure extracts Viafill details from innovus db} -define_args {
+        {-window "window coordinates" "" list optional}
+        {-window_size "window size in microns" "" string optional}
+    
+    }
+[INFO] Loading Pegasus 23.20 fill procedures
+<CMD> define_proc_arguments ProcessFills -info {This procedure processes Fill types} -define_args {
+    {-fillInfo "Design Fill data" "" list required}
+				{-csvName "File path for Fill Data csv file" "Path of CSV file" string required}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list required}
+    {-output_data "Boolean Flag to output Fill Data for further processing" "" string required}
+}
+<CMD> define_proc_arguments FillQor -info {This procedure extracts fill details from innovus db} -define_args {
+    {-layers "Fills Cleanup on which all layers" "list of Metal/Routing layers" list optional}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list optional}
+				{-outData "Boolean Flag to output Fill Data for further processing" "" boolean optional}
+    {-outDataFile "File path for Fill Data csv file" "Path of CSV file" string optional}
+}
+<CMD> define_proc_arguments ProcessFills_fast -info {This procedure processes Fill types} -define_args {
+    {-fillInfo "Design Fill data" "" list required}
+				{-csvName "File path for Fill Data csv file" "Path of CSV file" string required}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list required}
+    {-output_data "Boolean Flag to output Fill Data for further processing" "" string required}
+}
+<CMD> define_proc_arguments FillQor_fast -info {This procedure extracts fill details from innovus db} -define_args {
+    {-layers "Fills Cleanup on which all layers" "list of Metal/Routing layers" list optional}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list optional}
+				{-outData "Boolean Flag to output Fill Data for further processing" "" boolean optional}
+    {-outDataFile "File path for Fill Data csv file" "Path of CSV file" string optional}
+}
+<CMD> define_proc_arguments ProcessFills_fast_stampOnly -info {This procedure processes Fill types} -define_args {
+    {-fillInfo "Design Fill data" "" list required}
+	
+}
+<CMD> define_proc_arguments FillQor_fast_stampOnly -info {This procedure extracts fill details from innovus db} -define_args {
+    {-layers "Fills Cleanup on which all layers" "list of Metal/Routing layers" list optional}
+}
+<CMD> win
+<CMD> set init_gnd_net {gnd }
+<CMD> set init_lef_file lib/libreria.lef
+<CMD> set init_design_settop 0
+<CMD> set init_verilog synth/ProyectoFinal4Bits_syn.v
+<CMD> set init_pwr_net vdd
+<CMD> init_design
+
+Loading LEF file lib/libreria.lef ...
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_POLY', 
+Set DBUPerIGU to M2 pitch 380.
+
+viaInitial starts at Mon Dec  9 17:43:04 2024
+viaInitial ends at Mon Dec  9 17:43:04 2024
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+*** End library_loading (cpu=0.00min, real=0.00min, mem=0.0M, fe_cpu=0.64min, fe_real=3.35min, fe_mem=829.5M) ***
+#% Begin Load netlist data ... (date=12/09 17:43:04, mem=631.0M)
+*** Begin netlist parsing (mem=829.5M) ***
+Created 0 new cells from 0 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist 'synth/ProyectoFinal4Bits_syn.v'
+**WARN: (IMPVL-346):	Module 'HalfAdder' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+Type 'man IMPVL-346' for more detail.
+**WARN: (IMPVL-346):	Module 'Sumador_BK' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+Type 'man IMPVL-346' for more detail.
+
+*** Memory Usage v#1 (Current mem = 830.473M, initial mem = 284.363M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=830.5M) ***
+#% End Load netlist data ... (date=12/09 17:43:04, total cpu=0:00:00.0, real=0:00:00.0, peak res=634.1M, current mem=634.1M)
+Top level cell is Selector.
+Hooked 0 DB cells to tlib cells.
+**WARN: (IMPDB-2504):	Cell 'Sumador_BK' is instantiated in the Verilog netlist, but it is not defined in the library or design data.  Its pin directions may be derived incorrectly.  Provide the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+Type 'man IMPDB-2504' for more detail.
+**WARN: (IMPDB-2504):	Cell 'HalfAdder' is instantiated in the Verilog netlist, but it is not defined in the library or design data.  Its pin directions may be derived incorrectly.  Provide the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+Type 'man IMPDB-2504' for more detail.
+2 empty module found.
+Starting recursive module instantiation check.
+No recursion found.
+Term dir updated for 0 vinsts of 2 cells.
+Building hierarchical netlist for Cell Selector ...
+*** Netlist is unique.
+Set DBUPerIGU to techSite CoreSite width 760.
+** info: there are 36 modules.
+** info: there are 31 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 867.898M, initial mem = 284.363M) ***
+Horizontal Layer M1 offset = 190 (guessed)
+Vertical Layer M2 offset = 190 (guessed)
+Suggestion: specify LAYER OFFSET in LEF file
+Reason: hard to extract LAYER OFFSET from standard cells
+Start create_tracks
+Generated pitch 1.68 in metal10 is different from 1.71 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal8 is different from 0.855 defined in technology file in preferred direction.
+Generated pitch 0.95 in metal7 is different from 0.855 defined in technology file in preferred direction.
+Generated pitch 0.28 in metal6 is different from 0.285 defined in technology file in preferred direction.
+Generated pitch 0.28 in metal4 is different from 0.285 defined in technology file in preferred direction.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+**WARN: (IMPSYT-7328):	The design has been initialized in physical-only mode because the init_mmmc_file global variable was not defined. Timing analysis will not be possible within this session. You can only use commands that do not depend on timing data. If you need to use timing, you need to restart with an init_mmmc_file to define the timing setup, or you can save this design and use restoreDesign -mmmc_file <viewDef.tcl> to add the timing setup information.
+Extraction setup Started 
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPLF-155            1  ViaRule only supports routing/cut layer,...
+WARNING   IMPSYT-7328          1  The design has been initialized in physi...
+WARNING   IMPVL-346            2  Module '%s' is instantiated in the netli...
+WARNING   IMPDB-2504           2  Cell '%s' is instantiated in the Verilog...
+*** Message Summary: 6 warning(s), 0 error(s)
+
+<CMD> saveDesign Selector
+#% Begin save design ... (date=12/09 17:43:57, mem=865.9M)
+% Begin Save ccopt configuration ... (date=12/09 17:43:57, mem=869.0M)
+% End Save ccopt configuration ... (date=12/09 17:43:57, total cpu=0:00:00.0, real=0:00:00.0, peak res=869.7M, current mem=869.7M)
+% Begin Save netlist data ... (date=12/09 17:43:57, mem=889.5M)
+Writing Binary DB to Selector.dat/Selector.v.bin in single-threaded mode...
+% End Save netlist data ... (date=12/09 17:43:57, total cpu=0:00:00.0, real=0:00:00.0, peak res=889.8M, current mem=889.7M)
+Saving symbol-table file ...
+Saving congestion map file Selector.dat/Selector.route.congmap.gz ...
+% Begin Save AAE data ... (date=12/09 17:43:58, mem=890.4M)
+Saving AAE Data ...
+% End Save AAE data ... (date=12/09 17:43:58, total cpu=0:00:00.0, real=0:00:00.0, peak res=890.4M, current mem=890.4M)
+Saving preference file Selector.dat/gui.pref.tcl ...
+Saving mode setting ...
+Saving global file ...
+% Begin Save floorplan data ... (date=12/09 17:43:58, mem=891.1M)
+Saving floorplan file ...
+% End Save floorplan data ... (date=12/09 17:43:58, total cpu=0:00:00.0, real=0:00:00.0, peak res=891.9M, current mem=891.9M)
+Saving Drc markers ...
+... No Drc file written since there is no markers found.
+% Begin Save placement data ... (date=12/09 17:43:58, mem=892.0M)
+** Saving stdCellPlacement_binary (version# 2) ...
+Save Adaptive View Pruning View Names to Binary file
+% End Save placement data ... (date=12/09 17:43:58, total cpu=0:00:00.0, real=0:00:00.0, peak res=892.2M, current mem=892.2M)
+% Begin Save routing data ... (date=12/09 17:43:58, mem=892.2M)
+Saving route file ...
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=1115.5M) ***
+% End Save routing data ... (date=12/09 17:43:58, total cpu=0:00:00.0, real=0:00:00.0, peak res=897.4M, current mem=896.4M)
+Saving property file Selector.dat/Selector.prop
+*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1118.5M) ***
+% Begin Save power constraints data ... (date=12/09 17:43:58, mem=897.0M)
+% End Save power constraints data ... (date=12/09 17:43:58, total cpu=0:00:00.0, real=0:00:00.0, peak res=897.1M, current mem=897.1M)
+Generated self-contained design Selector.dat
+#% End save design ... (date=12/09 17:43:58, total cpu=0:00:00.3, real=0:00:01.0, peak res=899.3M, current mem=898.7M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+<CMD> getIoFlowFlag
+<CMD> setIoFlowFlag 0
+<CMD> floorPlan -site CoreSite -r 0.945454545455 0.7 100 100 100 100
+Horizontal Layer M1 offset = 190 (guessed)
+Vertical Layer M2 offset = 190 (guessed)
+Suggestion: specify LAYER OFFSET in LEF file
+Reason: hard to extract LAYER OFFSET from standard cells
+Start create_tracks
+Generated pitch 1.68 in metal10 is different from 1.71 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal8 is different from 0.855 defined in technology file in preferred direction.
+Generated pitch 0.95 in metal7 is different from 0.855 defined in technology file in preferred direction.
+Generated pitch 0.28 in metal6 is different from 0.285 defined in technology file in preferred direction.
+Generated pitch 0.28 in metal4 is different from 0.285 defined in technology file in preferred direction.
+<CMD> uiSetTool select
+<CMD> getIoFlowFlag
+<CMD> fit
+
+--------------------------------------------------------------------------------
+Exiting Innovus on Mon Dec  9 17:45:31 2024
+  Total CPU time:     0:00:55
+  Total real time:    0:05:49
+  Peak memory (main): 918.80MB
+
+
+*** Memory Usage v#1 (Current mem = 1133.164M, initial mem = 284.363M) ***
+*** Message Summary: 6 warning(s), 0 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:53.8, real=0:05:48, mem=1133.2M) ---

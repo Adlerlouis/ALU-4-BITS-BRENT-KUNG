@@ -1,0 +1,1056 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2023 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[19:04:40.059793] Configured Lic search path (21.01-s002): 5280@148.211.120.26
+
+Version: 21.18-s082_1, built Tue Jul 18 12:08:41 PDT 2023
+Options: 
+Date:    Thu Dec 05 19:04:40 2024
+Host:    ccslvcbasselic (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (1core*4cpus*7physical cpus*Intel(R) Xeon(R) Platinum 8268 CPU @ 2.90GHz 36608KB) (8008760KB)
+PID:     25597
+OS:      CentOS Linux release 7.9.2009 (Core)
+
+
+[19:04:40.018811] Periodic Lic check successful
+[19:04:40.018816] Feature usage summary:
+[19:04:40.018816] Genus_Synthesis
+Checking out license: Genus_Synthesis
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...
+Finished loading tool scripts (21 seconds elapsed).
+
+WARNING: This version of the tool is 506 days old.
+@genus:root: 1> read_lib /home/al-labse15/SumadorBrentKung/Sumador_BK/functional/libCompleta.lib
+
+Threads Configured:3
+
+  Message Summary for Library libCompleta.lib:
+  ********************************************
+  Missing library level attribute. [LBR-516]: 1
+  ********************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.100000, 27.000000) in library 'libCompleta.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+@genus:root: 2> read_hdl /home/al-labse15/Half_Adder/HalfAdder/functional/verilog.v
+@genus:root: 3> read_hdl /home/al-labse15/SumadorBrentKung/Black_Cell_Impar/functional/verilog.v
+@genus:root: 4> read_hdl /home/al-labse15/SumadorBrentKung/Black_Cell_Par/functional/verilog.v
+@genus:root: 5> read_hdl /home/al-labse15/SumadorBrentKung/Buffer_Impar/functional/verilog.v
+@genus:root: 6> read_hdl /home/al-labse15/SumadorBrentKung/Buffer_Par/functional/verilog.v
+@genus:root: 7> read_hdl /home/al-labse15/SumadorBrentKung/Estructura_Final/functional/verilog.v
+@genus:root: 8> read_hdl /home/al-labse15/SumadorBrentKung/Estructura_Inicial/functional/verilog.v
+@genus:root: 9> read_hdl /home/al-labse15/SumadorBrentKung/Gray_Cell_Impar/functional/verilog.v
+@genus:root: 10> read_hdl /home/al-labse15/SumadorBrentKung/Gray_Cell_Par/functional/verilog.v
+@genus:root: 11> read_hdl /home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v
+@genus:root: 12> elaborate Sumador_BK
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'Sumador_BK' from file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v'.
+Warning : Module port is wider than connected signal. [CDFG-465]
+        : Signal width (1) does not match width of input port 'a' (8) of instance 'EF0' of module 'Estructura_Final' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 144.
+        : This may cause simulation mismatches between the original and synthesized designs.
+Warning : Module port is wider than connected signal. [CDFG-465]
+        : Signal width (1) does not match width of input port 'b' (8) of instance 'EF0' of module 'Estructura_Final' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 144.
+Warning : Module port is wider than connected signal. [CDFG-465]
+        : Signal width (1) does not match width of output port 'sum' (8) of instance 'EF0' of module 'Estructura_Final' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 144.
+Warning : Module port is wider than connected signal. [CDFG-465]
+        : Signal width (1) does not match width of input port 'a' (8) of instance 'EF1' of module 'Estructura_Final' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 145.
+Warning : Module port is wider than connected signal. [CDFG-465]
+        : Signal width (1) does not match width of input port 'b' (8) of instance 'EF1' of module 'Estructura_Final' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 145.
+Warning : Module port is wider than connected signal. [CDFG-465]
+        : Signal width (1) does not match width of output port 'sum' (8) of instance 'EF1' of module 'Estructura_Final' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 145.
+Warning : Module port is wider than connected signal. [CDFG-465]
+        : Signal width (1) does not match width of input port 'a' (8) of instance 'EF2' of module 'Estructura_Final' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 146.
+Warning : Module port is wider than connected signal. [CDFG-465]
+        : Signal width (1) does not match width of input port 'b' (8) of instance 'EF2' of module 'Estructura_Final' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 146.
+Warning : Module port is wider than connected signal. [CDFG-465]
+        : Signal width (1) does not match width of output port 'sum' (8) of instance 'EF2' of module 'Estructura_Final' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 146.
+Warning : Module port is wider than connected signal. [CDFG-465]
+        : Signal width (1) does not match width of input port 'a' (8) of instance 'EF3' of module 'Estructura_Final' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 147.
+Warning : Module port is wider than connected signal. [CDFG-465]
+        : Signal width (1) does not match width of input port 'b' (8) of instance 'EF3' of module 'Estructura_Final' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 147.
+Warning : Module port is wider than connected signal. [CDFG-465]
+        : Signal width (1) does not match width of output port 'sum' (8) of instance 'EF3' of module 'Estructura_Final' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 147.
+Warning : Undriven module input port. [ELABUTL-127]
+        : Undriven bits of port 'a' of instance 'EF0' of module 'Estructura_Final' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 144, column 22, hid = 0.
+        : Run check_design to check 'Undriven Port(s)/Pin(s)' section for all undriven module input ports. It is better to double confirm with designer if these undriven ports are expected. During syn_gen the undriven ports are controlled by attribute 'hdl_unconnected_value', the default value is 0.
+Warning : Undriven module input port. [ELABUTL-127]
+        : Undriven bits of port 'b' of instance 'EF0' of module 'Estructura_Final' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 144, column 22, hid = 0.
+Warning : Undriven module input port. [ELABUTL-127]
+        : Undriven bits of port 'a' of instance 'EF1' of module 'Estructura_Final' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 145, column 22, hid = 0.
+Warning : Undriven module input port. [ELABUTL-127]
+        : Undriven bits of port 'b' of instance 'EF1' of module 'Estructura_Final' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 145, column 22, hid = 0.
+Warning : Undriven module input port. [ELABUTL-127]
+        : Undriven bits of port 'a' of instance 'EF2' of module 'Estructura_Final' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 146, column 22, hid = 0.
+Warning : Undriven module input port. [ELABUTL-127]
+        : Undriven bits of port 'b' of instance 'EF2' of module 'Estructura_Final' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 146, column 22, hid = 0.
+Warning : Undriven module input port. [ELABUTL-127]
+        : Undriven bits of port 'a' of instance 'EF3' of module 'Estructura_Final' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 147, column 22, hid = 0.
+Warning : Undriven module input port. [ELABUTL-127]
+        : Undriven bits of port 'b' of instance 'EF3' of module 'Estructura_Final' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 147, column 22, hid = 0.
+Warning : Undriven module output port. [ELABUTL-123]
+        : Undriven bits of output port 'sum' in module 'Sumador_BK' in file '/home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v' on line 8, column 23, hid = 0.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'Sumador_BK'.
+Checking for analog nets...
+Check completed for analog nets.
+Checking for source RTL...
+Check completed for source RTL.
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+
+Stage: post_elab
+--------------------------------------------------------
+| Trick             | Accepts | Rejects | Runtime (ms) | 
+--------------------------------------------------------
+| ume_constant_bmux |       0 |       0 |         0.00 | 
+--------------------------------------------------------
+Starting clip mux common data inputs [v1.0] (stage: post_elab, startdef: Sumador_BK, recur: true)
+Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting clip the non-user hierarchies [v2.0] (stage: post_elab, startdef: Sumador_BK, recur: true)
+Completed clip the non-user hierarchies (accepts: 0, rejects: 0, runtime: 0.000s)
+
+Stage: post_elab
+---------------------------------------------------------
+| Transform          | Accepts | Rejects | Runtime (ms) | 
+---------------------------------------------------------
+| hlo_clip_mux_input |       0 |       0 |         0.00 | 
+| hlo_clip           |       0 |       0 |         0.00 | 
+---------------------------------------------------------
+UM:   flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   elaborate
+design:Sumador_BK
+@genus:root: 13> set_db [get_db modules Co_0*] .boundary_opto strict_no
+0
+@genus:root: 14> set_db [get_db modules Co_1*] .boundary_opto strict_no
+0
+@genus:root: 15> syn_gen
+Info    : Undriven module input port. [ELABUTL-131]
+        : Assuming a logic '0' value for undriven bits of port 'a' of instance 'EF0' of module 'Estructura_Final'.
+        : The 'hdl_unconnected_value' attribute controls treatment of undriven input port.
+Info    : Undriven module input port. [ELABUTL-131]
+        : Assuming a logic '0' value for undriven bits of port 'b' of instance 'EF0' of module 'Estructura_Final'.
+Info    : Undriven module input port. [ELABUTL-131]
+        : Assuming a logic '0' value for undriven bits of port 'a' of instance 'EF1' of module 'Estructura_Final'.
+Info    : Undriven module input port. [ELABUTL-131]
+        : Assuming a logic '0' value for undriven bits of port 'b' of instance 'EF1' of module 'Estructura_Final'.
+Info    : Undriven module input port. [ELABUTL-131]
+        : Assuming a logic '0' value for undriven bits of port 'a' of instance 'EF2' of module 'Estructura_Final'.
+Info    : Undriven module input port. [ELABUTL-131]
+        : Assuming a logic '0' value for undriven bits of port 'b' of instance 'EF2' of module 'Estructura_Final'.
+Info    : Undriven module input port. [ELABUTL-131]
+        : Assuming a logic '0' value for undriven bits of port 'a' of instance 'EF3' of module 'Estructura_Final'.
+Info    : Undriven module input port. [ELABUTL-131]
+        : Assuming a logic '0' value for undriven bits of port 'b' of instance 'EF3' of module 'Estructura_Final'.
+Info    : Undriven module output port. [ELABUTL-128]
+        : Assuming a logic '0' value for undriven bits of output port 'sum' in module 'Sumador_BK'.
+        : The 'hdl_unconnected_value' attribute controls treatment of undriven output port.
+
+Stage: pre_early_cg
+------------------------------------------------
+| Transform | Accepts | Rejects | Runtime (ms) | 
+------------------------------------------------
+------------------------------------------------
+##Generic Timing Info for library domain: _default_ typical gate delay: 68.3 ps std_slew: 2.2 ps std_load: 4.3 fF
+Starting mux data reorder optimization [v1.0] (stage: pre_to_gen_setup, startdef: Sumador_BK, recur: true)
+Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+
+Stage: pre_to_gen_setup
+------------------------------------------------------
+| Transform       | Accepts | Rejects | Runtime (ms) | 
+------------------------------------------------------
+| hlo_mux_reorder |       0 |       0 |         0.00 | 
+------------------------------------------------------
+Info    : Deleting instances not driving any primary outputs. [GLO-34]
+        : Deleting 10 hierarchical instances.
+        : Optimizations such as constant propagation or redundancy removal could change the connections so a hierarchical instance does not drive any primary outputs anymore. To see the list of deleted hierarchical instances, set the 'information_level' attribute to 2 or above. If the message is truncated set the message attribute 'truncate' to false to see the complete list. To prevent this optimization, set the 'delete_unloaded_insts' root/subdesign attribute to 'false' or 'preserve' instance attribute to 'true'.
+Info    : Deleting instances not driving any primary outputs. [GLO-34]
+        : Deleting 10 hierarchical instances.
+Info    : Synthesizing. [SYNTH-1]
+        : Synthesizing 'Sumador_BK' to generic gates using 'medium' effort.
+Running Synthesis Turbo Flow Version 1.
+PBS_Generic-Start - Elapsed_Time 0, CPU_Time 0.0
+stamp 'PBS_Generic-Start' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:53) |  00:00:00(00:00:00) |   0.0(  0.0) |   19:10:38 (Dec05) |  304.2 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+TNS Restructuring config: no_value at stage: generic applied.
+Info    : Partition Based Synthesis execution skipped. [PHYS-752]
+        : Design size is less than the partition size '100000' for distributed generic optimization to kick in.
+Starting mux data reorder optimization [v1.0] (stage: pre_to_gen_setup, startdef: Sumador_BK, recur: true)
+Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+
+Stage: pre_to_gen_setup
+------------------------------------------------------
+| Transform       | Accepts | Rejects | Runtime (ms) | 
+------------------------------------------------------
+| hlo_mux_reorder |       0 |       0 |         0.00 | 
+------------------------------------------------------
+Starting mux data reorder optimization [v1.0] (stage: post_to_gen_setup, startdef: Sumador_BK, recur: true)
+Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+
+Stage: post_to_gen_setup
+------------------------------------------------------
+| Transform       | Accepts | Rejects | Runtime (ms) | 
+------------------------------------------------------
+| hlo_mux_reorder |       0 |       0 |         0.00 | 
+------------------------------------------------------
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+
+Stage: pre_hlo_rtlopt
+--------------------------------------------
+| Trick | Accepts | Rejects | Runtime (ms) | 
+--------------------------------------------
+--------------------------------------------
+Starting infer macro optimization [v1.0] (stage: pre_rtlopt, startdef: Sumador_BK, recur: true)
+Completed infer macro optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting decode mux sandwich optimization [v2.0] (stage: pre_rtlopt, startdef: Sumador_BK, recur: true)
+Completed decode mux sandwich optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting decode mux optimization [v1.0] (stage: pre_rtlopt, startdef: Sumador_BK, recur: true)
+Completed decode mux optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting chop wide muxes [v1.0] (stage: pre_rtlopt, startdef: Sumador_BK, recur: true)
+Completed chop wide muxes (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting common data mux cascade opt [v1.0] (stage: pre_rtlopt, startdef: Sumador_BK, recur: true)
+Completed common data mux cascade opt (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting mux input consolidation [v1.0] (stage: pre_rtlopt, startdef: Sumador_BK, recur: true)
+Completed mux input consolidation (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting constant-data mux optimization [v1.0] (stage: pre_rtlopt, startdef: Sumador_BK, recur: true)
+Completed constant-data mux optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting chain-to-tree inequality transform [v2.0] (stage: pre_rtlopt, startdef: Sumador_BK, recur: true)
+Completed chain-to-tree inequality transform (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting reconvergence optimization [v1.0] (stage: pre_rtlopt, startdef: Sumador_BK, recur: true)
+Completed reconvergence optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting logic restructure optimization [v1.0] (stage: pre_rtlopt, startdef: Sumador_BK, recur: true)
+Completed logic restructure optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting common select mux optimization [v1.0] (stage: pre_rtlopt, startdef: Sumador_BK, recur: true)
+Completed common select mux optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting identity transform [v3.0] (stage: pre_rtlopt, startdef: Sumador_BK, recur: true)
+Completed identity transform (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting reduce operator chain [v1.0] (stage: pre_rtlopt, startdef: Sumador_BK, recur: true)
+Completed reduce operator chain (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting common data mux cascade opt [v1.0] (stage: pre_rtlopt, startdef: Sumador_BK, recur: true)
+Completed common data mux cascade opt (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting mux input consolidation [v1.0] (stage: pre_rtlopt, startdef: Sumador_BK, recur: true)
+Completed mux input consolidation (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting optimize datapath elements [v1.0] (stage: pre_rtlopt, startdef: Sumador_BK, recur: true)
+Completed optimize datapath elements (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting datapath recasting [v1.0] (stage: pre_rtlopt, startdef: Sumador_BK, recur: true)
+Completed datapath recasting (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting clip mux common data inputs [v1.0] (stage: pre_rtlopt, startdef: Sumador_BK, recur: true)
+Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting clip the non-user hierarchies [v2.0] (stage: pre_rtlopt, startdef: Sumador_BK, recur: true)
+Completed clip the non-user hierarchies (accepts: 0, rejects: 0, runtime: 0.000s)
+
+Stage: pre_rtlopt
+----------------------------------------------------------------
+| Transform                 | Accepts | Rejects | Runtime (ms) | 
+----------------------------------------------------------------
+| hlo_infer_macro           |       0 |       0 |         0.00 | 
+| hlo_decode_mux_sandwich   |       0 |       0 |         0.00 | 
+| hlo_mux_decode            |       0 |       0 |         0.00 | 
+| hlo_chop_mux              |       0 |       0 |         1.00 | 
+| hlo_mux_cascade_opt       |       0 |       0 |         0.00 | 
+| hlo_mux_consolidation     |       0 |       0 |         0.00 | 
+| hlo_constant_mux_opt      |       0 |       0 |         0.00 | 
+| hlo_inequality_transform  |       0 |       0 |         0.00 | 
+| hlo_reconv_opt            |       0 |       0 |         0.00 | 
+| hlo_restructure           |       0 |       0 |         0.00 | 
+| hlo_common_select_muxopto |       0 |       0 |         0.00 | 
+| hlo_identity_transform    |       0 |       0 |         1.00 | 
+| hlo_reduce_operator_chain |       0 |       0 |         0.00 | 
+| hlo_mux_cascade_opt       |       0 |       0 |         0.00 | 
+| hlo_mux_consolidation     |       0 |       0 |         0.00 | 
+| hlo_optimize_datapath     |       0 |       0 |         0.00 | 
+| hlo_datapath_recast       |       0 |       0 |         0.00 | 
+| hlo_clip_mux_input        |       0 |       0 |         0.00 | 
+| hlo_clip                  |       0 |       0 |         0.00 | 
+----------------------------------------------------------------
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+
+Stage: post_hlo_rtlopt
+--------------------------------------------------
+| Trick       | Accepts | Rejects | Runtime (ms) | 
+--------------------------------------------------
+| ume_runtime |       0 |       0 |         0.00 | 
+--------------------------------------------------
+Number of big hc bmuxes before = 0
+Info    : Pre-processed datapath logic. [DPOPT-6]
+        : Pre-processing optimizations applied to datapath logic in 'Sumador_BK':
+          live_trim(1) 
+Info    : Skipping datapath optimization. [DPOPT-5]
+        : There is no datapath logic in 'Sumador_BK'.
+Number of big hc bmuxes after = 0
+Starting logic reduction [v1.0] (stage: post_rtlopt, startdef: Sumador_BK, recur: true)
+Completed logic reduction (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting mux data reorder optimization [v1.0] (stage: post_rtlopt, startdef: Sumador_BK, recur: true)
+Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+
+Stage: post_rtlopt
+----------------------------------------------------------
+| Transform           | Accepts | Rejects | Runtime (ms) | 
+----------------------------------------------------------
+| hlo_logic_reduction |       0 |       0 |         0.00 | 
+| hlo_mux_reorder     |       0 |       0 |         0.00 | 
+----------------------------------------------------------
+Starting mux speculation [v1.0] (stage: post_muxopt, startdef: Sumador_BK, recur: true)
+Starting speculation optimization
+Completed speculation optimization (accepts:0)
+Completed mux speculation (accepts: 0, rejects: 0, runtime: 0.003s)
+
+Stage: post_muxopt
+------------------------------------------------------
+| Transform       | Accepts | Rejects | Runtime (ms) | 
+------------------------------------------------------
+| hlo_speculation |       0 |       0 |         3.00 | 
+------------------------------------------------------
+==================================
+Stage : to_generic 
+==================================
+  =================
+   Message Summary
+  =================
+-----------------------------------------------------------------------------------------------
+|     Id      |  Sev   |Count |                         Message Text                          |
+-----------------------------------------------------------------------------------------------
+| CDFG-465    |Warning |   12 |Module port is wider than connected signal.                    |
+|             |        |      |This may cause simulation mismatches between the original and  |
+|             |        |      | synthesized designs.                                          |
+| DPOPT-5     |Info    |    1 |Skipping datapath optimization.                                |
+| DPOPT-6     |Info    |    1 |Pre-processed datapath logic.                                  |
+| ELAB-1      |Info    |    1 |Elaborating Design.                                            |
+| ELAB-2      |Info    |    7 |Elaborating Subdesign.                                         |
+| ELAB-3      |Info    |    1 |Done Elaborating Design.                                       |
+| ELABUTL-123 |Warning |    1 |Undriven module output port.                                   |
+| ELABUTL-127 |Warning |    8 |Undriven module input port.                                    |
+|             |        |      |Run check_design to check 'Undriven Port(s)/Pin(s)             |
+|             |        |      | ' section for all undriven module input ports. It is better   |
+|             |        |      | to double confirm with designer if these undriven ports are   |
+|             |        |      | expected. During syn_gen the undriven ports are controlled by |
+|             |        |      | attribute 'hdl_unconnected_value', the default value is 0.    |
+| ELABUTL-128 |Info    |    1 |Undriven module output port.                                   |
+|             |        |      |The 'hdl_unconnected_value' attribute controls treatment of    |
+|             |        |      | undriven output port.                                         |
+| ELABUTL-131 |Info    |    8 |Undriven module input port.                                    |
+|             |        |      |The 'hdl_unconnected_value' attribute controls treatment of    |
+|             |        |      | undriven input port.                                          |
+| GLO-34      |Info    |    2 |Deleting instances not driving any primary outputs.            |
+|             |        |      |Optimizations such as constant propagation or redundancy       |
+|             |        |      | removal could change the connections so a hierarchical        |
+|             |        |      | instance does not drive any primary outputs anymore. To see   |
+|             |        |      | the list of deleted hierarchical instances, set the           |
+|             |        |      | 'information_level' attribute to 2 or above. If the message   |
+|             |        |      | is truncated set the message attribute 'truncate' to false to |
+|             |        |      | see the complete list. To prevent this optimization, set the  |
+|             |        |      | 'delete_unloaded_insts' root/subdesign attribute to 'false'   |
+|             |        |      | or 'preserve' instance attribute to 'true'.                   |
+| LBR-412     |Info    |    1 |Created nominal operating condition.                           |
+|             |        |      |The nominal operating condition is represented, either by the  |
+|             |        |      | nominal PVT values specified in the library source            |
+|             |        |      | (via nom_process,nom_voltage and nom_temperature respectively |
+|             |        |      | ), or by the default PVT values (1.0,1.0,1.0).                |
+| LBR-516     |Info    |    1 |Missing library level attribute.                               |
+| PHYS-752    |Info    |    1 |Partition Based Synthesis execution skipped.                   |
+| SYNTH-1     |Info    |    1 |Synthesizing.                                                  |
+-----------------------------------------------------------------------------------------------
+Mapper: Libraries have:
+	domain _default_: 28 combo usable cells and 4 sequential usable cells
+Multi-threaded constant propagation [1|0] ...
+Multi-threaded Virtual Mapping    (4 threads, 4 of 4 CPUs usable)
+==================================
+Stage : first_condense 
+==================================
+  =================
+   Message Summary
+  =================
+-----------------------------------------------------------------------------------------------
+|   Id   |Sev  |Count |                             Message Text                              |
+-----------------------------------------------------------------------------------------------
+| GLO-51 |Info |   12 |Hierarchical instance automatically ungrouped.                         |
+|        |     |      |Hierarchical instances can be automatically ungrouped to allow for     |
+|        |     |      | better area or timing optimization. To prevent this ungroup, set the  |
+|        |     |      | root-level attribute 'auto_ungroup' to 'none'. You can also prevent   |
+|        |     |      | individual ungroup with setting the attribute 'ungroup_ok' of         |
+|        |     |      | instances or modules to 'false'.                                      |
+-----------------------------------------------------------------------------------------------
+ 
+Global mapping target info
+==========================
+Cost Group 'default' target slack: Unconstrained
+
+PBS_Generic_Opt-Post - Elapsed_Time 1, CPU_Time 0.9945720000000016
+stamp 'PBS_Generic_Opt-Post' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:53) |  00:00:00(00:00:00) |   0.0(  0.0) |   19:10:38 (Dec05) |  304.2 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:54) |  00:00:00(00:00:01) | 100.0(100.0) |   19:10:39 (Dec05) |  304.2 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+PBS_Generic-Postgen HBO Optimizations - Elapsed_Time 0, CPU_Time 0.0
+stamp 'PBS_Generic-Postgen HBO Optimizations' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:53) |  00:00:00(00:00:00) |   0.0(  0.0) |   19:10:38 (Dec05) |  304.2 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:54) |  00:00:00(00:00:01) | 100.0(100.0) |   19:10:39 (Dec05) |  304.2 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:54) |  00:00:00(00:00:00) |   0.0(  0.0) |   19:10:39 (Dec05) |  304.2 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+##>=================== Cadence Confidential (Generic-Logical) ===================
+##>=================== Cadence Confidential (Generic-Logical) ===================
+##>Main Thread Summary:
+##>----------------------------------------------------------------------------------------
+##>STEP                           Elapsed       WNS       TNS     Insts      Area    Memory
+##>----------------------------------------------------------------------------------------
+##>G:Initial                            0         -         -        60       202       304
+##>G:Setup                              0         -         -         -         -         -
+##>G:Launch ST                          0         -         -         -         -         -
+##>G:Design Partition                   0         -         -         -         -         -
+##>G:Create Partition Netlists          0         -         -         -         -         -
+##>G:Init Power                         0         -         -         -         -         -
+##>G:Budgeting                          0         -         -         -         -         -
+##>G:Derenv-DB                          0         -         -         -         -         -
+##>G:Debug Outputs                      0         -         -         -         -         -
+##>G:ST loading                         0         -         -         -         -         -
+##>G:Distributed                        0         -         -         -         -         -
+##>G:Timer                              0         -         -         -         -         -
+##>G:Assembly                           0         -         -         -         -         -
+##>G:DFT                                0         -         -         -         -         -
+##>G:Const Prop                         0         -         -        33       120       304
+##>G:Misc                               1
+##>----------------------------------------------------------------------------------------
+##>Total Elapsed                        1
+##>========================================================================================
+Info    : Done synthesizing. [SYNTH-2]
+        : Done synthesizing 'Sumador_BK' to generic gates.
+      flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   syn_gen
+@genus:root: 16> syn_map
+##Generic Timing Info for library domain: _default_ typical gate delay: 68.3 ps std_slew: 2.2 ps std_load: 4.3 fF
+Info    : Mapping. [SYNTH-4]
+        : Mapping 'Sumador_BK' using 'high' effort.
+Mapper: Libraries have:
+	domain _default_: 28 combo usable cells and 4 sequential usable cells
+Configuring mapper costing (none)
+TNS Restructuring config: no_value at stage: map applied.
+PBS_TechMap-Start - Elapsed_Time 0, CPU_Time 0.0
+stamp 'PBS_TechMap-Start' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:53) |  00:00:00(00:00:00) |   0.0(  0.0) |   19:10:38 (Dec05) |  304.2 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:54) |  00:00:00(00:00:01) | 100.0(  4.5) |   19:10:39 (Dec05) |  304.2 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:54) |  00:00:00(00:00:00) |   0.0(  0.0) |   19:10:39 (Dec05) |  304.2 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:06:15) |  00:00:00(00:00:21) |   0.0( 95.5) |   19:11:00 (Dec05) |  601.7 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+PBS_TechMap-Premap HBO Optimizations - Elapsed_Time 0, CPU_Time 1.0
+stamp 'PBS_TechMap-Premap HBO Optimizations' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:53) |  00:00:00(00:00:00) |   0.0(  0.0) |   19:10:38 (Dec05) |  304.2 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:54) |  00:00:00(00:00:01) |  49.9(  4.5) |   19:10:39 (Dec05) |  304.2 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:54) |  00:00:00(00:00:00) |   0.0(  0.0) |   19:10:39 (Dec05) |  304.2 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:06:15) |  00:00:00(00:00:21) |   0.0( 95.5) |   19:11:00 (Dec05) |  601.7 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:23(00:06:15) |  00:00:01(00:00:00) |  50.1(  0.0) |   19:11:00 (Dec05) |  601.7 MB | PBS_TechMap-Premap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+Info    : Partition Based Synthesis execution skipped. [PHYS-752]
+        : Design size is less than the partition size '100000' for distributed mapping optimization to kick in.
+Mapper: Libraries have:
+	domain _default_: 28 combo usable cells and 4 sequential usable cells
+Multi-threaded Virtual Mapping    (4 threads, 4 of 4 CPUs usable)
+ 
+Global mapping target info
+==========================
+Cost Group 'default' target slack: Unconstrained
+
+Multi-threaded Virtual Mapping    (4 threads, 4 of 4 CPUs usable)
+Multi-threaded Technology Mapping (4 threads, 4 of 4 CPUs usable)
+ 
+Global mapping status
+=====================
+                                    Worst 
+                           Total  Weighted
+Operation                   Area  Neg Slk Worst Path
+ global_map                   45        0  N/A
+
+    Cost Group            Target    Slack    Diff.  Constr.
+-----------------------------------------------------------
+       default          unconst. unconst.              N.A. 
+
+ 
+Global incremental target info
+==============================
+Cost Group 'default' target slack: Unconstrained
+
+==================================
+Stage : global_incr_map 
+==================================
+  =================
+   Message Summary
+  =================
+-----------------------------------------------------------------------
+|    Id    |Sev  |Count |                Message Text                 |
+-----------------------------------------------------------------------
+| PHYS-752 |Info |    1 |Partition Based Synthesis execution skipped. |
+| SYNTH-2  |Info |    1 |Done synthesizing.                           |
+| SYNTH-4  |Info |    1 |Mapping.                                     |
+-----------------------------------------------------------------------
+ 
+Global incremental optimization status
+======================================
+                                    Worst 
+                           Total  Weighted
+Operation                   Area  Neg Slk Worst Path
+ global_incr                  45        0  N/A
+
+    Cost Group            Target    Slack    Diff.  Constr.
+-----------------------------------------------------------
+       default          unconst. unconst.              N.A. 
+
+INFO: skipping constant propagation
+PBS_Techmap-Global Mapping - Elapsed_Time 0, CPU_Time -0.014113000000001819
+stamp 'PBS_Techmap-Global Mapping' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:53) |  00:00:00(00:00:00) |   0.0(  0.0) |   19:10:38 (Dec05) |  304.2 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:54) |  00:00:00(00:00:01) |  50.2(  4.5) |   19:10:39 (Dec05) |  304.2 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:54) |  00:00:00(00:00:00) |   0.0(  0.0) |   19:10:39 (Dec05) |  304.2 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:06:15) |  00:00:00(00:00:21) |   0.0( 95.5) |   19:11:00 (Dec05) |  601.7 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:23(00:06:15) |  00:00:01(00:00:00) |  50.5(  0.0) |   19:11:00 (Dec05) |  601.7 MB | PBS_TechMap-Premap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:23(00:06:15) |  00:00:00(00:00:00) |  -0.7(  0.0) |   19:11:00 (Dec05) |  601.7 MB | PBS_Techmap-Global Mapping
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+Info    : Wrote formal verification information. [CFM-5]
+        : Wrote 'fv/Sumador_BK/fv_map.fv.json' for netlist 'fv/Sumador_BK/fv_map.v.gz'.
+Info    : Existing dofile found. Copied as fv/Sumador_BK/rtl_to_fv_map.do~.
+Info    : Wrote dofile. [CFM-1]
+        : Dofile is 'fv/Sumador_BK/rtl_to_fv_map.do'.
+        : Alias mapping flow is enabled.
+PBS_TechMap-Datapath Postmap Operations - Elapsed_Time 1, CPU_Time 1.0
+stamp 'PBS_TechMap-Datapath Postmap Operations' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:53) |  00:00:00(00:00:00) |   0.0(  0.0) |   19:10:38 (Dec05) |  304.2 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:54) |  00:00:00(00:00:01) |  33.4(  4.3) |   19:10:39 (Dec05) |  304.2 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:54) |  00:00:00(00:00:00) |   0.0(  0.0) |   19:10:39 (Dec05) |  304.2 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:06:15) |  00:00:00(00:00:21) |   0.0( 91.3) |   19:11:00 (Dec05) |  601.7 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:23(00:06:15) |  00:00:01(00:00:00) |  33.6(  0.0) |   19:11:00 (Dec05) |  601.7 MB | PBS_TechMap-Premap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:23(00:06:15) |  00:00:00(00:00:00) |  -0.5(  0.0) |   19:11:00 (Dec05) |  601.7 MB | PBS_Techmap-Global Mapping
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:24(00:06:16) |  00:00:01(00:00:01) |  33.6(  4.3) |   19:11:01 (Dec05) |  601.7 MB | PBS_TechMap-Datapath Postmap Operations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+PBS_TechMap-Postmap HBO Optimizations - Elapsed_Time 0, CPU_Time -3.500000000045134e-5
+stamp 'PBS_TechMap-Postmap HBO Optimizations' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:53) |  00:00:00(00:00:00) |   0.0(  0.0) |   19:10:38 (Dec05) |  304.2 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:54) |  00:00:00(00:00:01) |  33.4(  4.3) |   19:10:39 (Dec05) |  304.2 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:54) |  00:00:00(00:00:00) |   0.0(  0.0) |   19:10:39 (Dec05) |  304.2 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:06:15) |  00:00:00(00:00:21) |   0.0( 91.3) |   19:11:00 (Dec05) |  601.7 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:23(00:06:15) |  00:00:01(00:00:00) |  33.6(  0.0) |   19:11:00 (Dec05) |  601.7 MB | PBS_TechMap-Premap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:23(00:06:15) |  00:00:00(00:00:00) |  -0.5(  0.0) |   19:11:00 (Dec05) |  601.7 MB | PBS_Techmap-Global Mapping
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:24(00:06:16) |  00:00:01(00:00:01) |  33.6(  4.3) |   19:11:01 (Dec05) |  601.7 MB | PBS_TechMap-Datapath Postmap Operations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:24(00:06:16) | -01:59:57(00:00:00) |  -0.0(  0.0) |   19:11:01 (Dec05) |  601.7 MB | PBS_TechMap-Postmap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+ Doing ConstProp on design:Sumador_BK ... 
+
+Time taken by ConstProp Step: 00:00:00
+PBS_TechMap-Postmap Clock Gating - Elapsed_Time 0, CPU_Time 0.0
+stamp 'PBS_TechMap-Postmap Clock Gating' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:53) |  00:00:00(00:00:00) |   0.0(  0.0) |   19:10:38 (Dec05) |  304.2 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:54) |  00:00:00(00:00:01) |  33.4(  4.3) |   19:10:39 (Dec05) |  304.2 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:54) |  00:00:00(00:00:00) |   0.0(  0.0) |   19:10:39 (Dec05) |  304.2 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:06:15) |  00:00:00(00:00:21) |   0.0( 91.3) |   19:11:00 (Dec05) |  601.7 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:23(00:06:15) |  00:00:01(00:00:00) |  33.6(  0.0) |   19:11:00 (Dec05) |  601.7 MB | PBS_TechMap-Premap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:23(00:06:15) |  00:00:00(00:00:00) |  -0.5(  0.0) |   19:11:00 (Dec05) |  601.7 MB | PBS_Techmap-Global Mapping
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:24(00:06:16) |  00:00:01(00:00:01) |  33.6(  4.3) |   19:11:01 (Dec05) |  601.7 MB | PBS_TechMap-Datapath Postmap Operations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:24(00:06:16) | -01:59:57(00:00:00) |  -0.0(  0.0) |   19:11:01 (Dec05) |  601.7 MB | PBS_TechMap-Postmap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:24(00:06:16) |  00:00:00(00:00:00) |   0.0(  0.0) |   19:11:01 (Dec05) |  601.7 MB | PBS_TechMap-Postmap Clock Gating
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+-------------------------------------------------------------------------------
+ hi_fo_buf                    45        0         0         0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+       hi_fo_buf         0  (        0 /        0 )  0.00
+
+ 
+Incremental optimization status
+===============================
+                                    Worst     Total DRC Total
+                           Total  Weighted     Neg       Max 
+Operation                   Area  Neg Slk     Slack      Cap 
+ init_delay                   45        0         0         0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+       crit_upsz         0  (        0 /        0 )  0.00
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+          plc_st         0  (        0 /        0 )  0.00
+    plc_st_fence         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+      plc_laf_st         0  (        0 /        0 )  0.00
+ plc_laf_st_fence         0  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+            fopt         0  (        0 /        0 )  0.00
+   plc_laf_lo_st         0  (        0 /        0 )  0.00
+       plc_lo_st         0  (        0 /        0 )  0.00
+        mb_split         0  (        0 /        0 )  0.00
+
+ 
+Local TNS optimization status
+=============================
+                                    Worst     Total DRC Total
+                           Total  Weighted     Neg       Max 
+Operation                   Area  Neg Slk     Slack      Cap 
+ init_tns                     45        0         0         0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+   plc_laf_lo_st         0  (        0 /        0 )  0.00
+       plc_lo_st         0  (        0 /        0 )  0.00
+            fopt         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+        setup_dn         0  (        0 /        0 )  0.00
+        mb_split         0  (        0 /        0 )  0.00
+
+PBS_TechMap-Postmap Cleanup - Elapsed_Time 0, CPU_Time -0.00018999999999991246
+stamp 'PBS_TechMap-Postmap Cleanup' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:53) |  00:00:00(00:00:00) |   0.0(  0.0) |   19:10:38 (Dec05) |  304.2 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:54) |  00:00:00(00:00:01) |  33.4(  4.3) |   19:10:39 (Dec05) |  304.2 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:54) |  00:00:00(00:00:00) |   0.0(  0.0) |   19:10:39 (Dec05) |  304.2 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:06:15) |  00:00:00(00:00:21) |   0.0( 91.3) |   19:11:00 (Dec05) |  601.7 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:23(00:06:15) |  00:00:01(00:00:00) |  33.6(  0.0) |   19:11:00 (Dec05) |  601.7 MB | PBS_TechMap-Premap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:23(00:06:15) |  00:00:00(00:00:00) |  -0.5(  0.0) |   19:11:00 (Dec05) |  601.7 MB | PBS_Techmap-Global Mapping
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:24(00:06:16) |  00:00:01(00:00:01) |  33.6(  4.3) |   19:11:01 (Dec05) |  601.7 MB | PBS_TechMap-Datapath Postmap Operations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:24(00:06:16) | -01:59:57(00:00:00) |  -0.0(  0.0) |   19:11:01 (Dec05) |  601.7 MB | PBS_TechMap-Postmap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:24(00:06:16) |  00:00:00(00:00:00) |   0.0(  0.0) |   19:11:01 (Dec05) |  601.7 MB | PBS_TechMap-Postmap Clock Gating
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:24(00:06:16) |  00:00:00(00:00:00) |  -0.0(  0.0) |   19:11:01 (Dec05) |  601.7 MB | PBS_TechMap-Postmap Cleanup
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+PBS_Techmap-Post_MBCI - Elapsed_Time 0, CPU_Time 0.0
+stamp 'PBS_Techmap-Post_MBCI' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:53) |  00:00:00(00:00:00) |   0.0(  0.0) |   19:10:38 (Dec05) |  304.2 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:54) |  00:00:00(00:00:01) |  33.4(  4.3) |   19:10:39 (Dec05) |  304.2 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:05:54) |  00:00:00(00:00:00) |   0.0(  0.0) |   19:10:39 (Dec05) |  304.2 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:22(00:06:15) |  00:00:00(00:00:21) |   0.0( 91.3) |   19:11:00 (Dec05) |  601.7 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:23(00:06:15) |  00:00:01(00:00:00) |  33.6(  0.0) |   19:11:00 (Dec05) |  601.7 MB | PBS_TechMap-Premap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:23(00:06:15) |  00:00:00(00:00:00) |  -0.5(  0.0) |   19:11:00 (Dec05) |  601.7 MB | PBS_Techmap-Global Mapping
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:24(00:06:16) |  00:00:01(00:00:01) |  33.6(  4.3) |   19:11:01 (Dec05) |  601.7 MB | PBS_TechMap-Datapath Postmap Operations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:24(00:06:16) | -01:59:57(00:00:00) |  -0.0(  0.0) |   19:11:01 (Dec05) |  601.7 MB | PBS_TechMap-Postmap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:24(00:06:16) |  00:00:00(00:00:00) |   0.0(  0.0) |   19:11:01 (Dec05) |  601.7 MB | PBS_TechMap-Postmap Clock Gating
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:24(00:06:16) |  00:00:00(00:00:00) |  -0.0(  0.0) |   19:11:01 (Dec05) |  601.7 MB | PBS_TechMap-Postmap Cleanup
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:24(00:06:16) |  00:00:00(00:00:00) |   0.0(  0.0) |   19:11:01 (Dec05) |  601.7 MB | PBS_Techmap-Post_MBCI
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+##>=================== Cadence Confidential (Mapping-Logical) ===================
+##>Main Thread Summary:
+##>----------------------------------------------------------------------------------------
+##>STEP                           Elapsed       WNS       TNS     Insts      Area    Memory
+##>----------------------------------------------------------------------------------------
+##>M:Initial                            0         -         -        33       120       601
+##>M:Pre Cleanup                        0         -         -        33       120       601
+##>M:Setup                              0         -         -         -         -         -
+##>M:Launch ST                          0         -         -         -         -         -
+##>M:Design Partition                   0         -         -         -         -         -
+##>M:Create Partition Netlists          0         -         -         -         -         -
+##>M:Init Power                         0         -         -         -         -         -
+##>M:Budgeting                          0         -         -         -         -         -
+##>M:Derenv-DB                          0         -         -         -         -         -
+##>M:Debug Outputs                      0         -         -         -         -         -
+##>M:ST loading                         0         -         -         -         -         -
+##>M:Distributed                        0         -         -         -         -         -
+##>M:Timer                              0         -         -         -         -         -
+##>M:Assembly                           0         -         -         -         -         -
+##>M:DFT                                0         -         -         -         -         -
+##>M:DP Operations                      1         -         -        11        44       601
+##>M:Const Prop                         0         -         0        11        44       601
+##>M:Cleanup                            0         -         0        11        44       601
+##>M:MBCI                               0         -         -        11        44       601
+##>M:Const Gate Removal                 0         -         -         -         -         -
+##>M:Misc                               0
+##>----------------------------------------------------------------------------------------
+##>Total Elapsed                        1
+##>========================================================================================
+Info    : Done mapping. [SYNTH-5]
+        : Done mapping 'Sumador_BK'.
+      flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   syn_map
+@genus:root: 17> report gates
+============================================================
+  Generated by:           Genus(TM) Synthesis Solution 21.18-s082_1
+  Generated on:           Dec 05 2024  07:11:18 pm
+  Module:                 Sumador_BK
+  Technology library:     gscl45nm 
+  Operating conditions:   typical (balanced_tree)
+  Wireload mode:          enclosed
+  Area mode:              timing library
+============================================================
+
+                           
+  Gate   Instances   Area    Library   
+---------------------------------------
+HAX1             6  28.158    gscl45nm 
+OR2X1            3   7.039    gscl45nm 
+XNOR2X1          2   9.386    gscl45nm 
+---------------------------------------
+total           11  44.584             
+
+
+                                       
+     Type      Instances  Area  Area % 
+---------------------------------------
+logic                 11 44.583  100.0 
+physical_cells         0  0.000    0.0 
+---------------------------------------
+total                 11 44.583  100.0 
+
+@genus:root: 18> report timing
+============================================================
+  Generated by:           Genus(TM) Synthesis Solution 21.18-s082_1
+  Generated on:           Dec 05 2024  07:11:34 pm
+  Module:                 Sumador_BK
+  Operating conditions:   typical (balanced_tree)
+  Wireload mode:          enclosed
+  Area mode:              timing library
+============================================================
+
+Some unconstrained paths have not been displayed.
+Use -unconstrained or set the root attribute 'timing_report_unconstrained' to 'true' to see only these unconstrained paths.
+
+@genus:root: 19> report timing -unconstrianed
+Error   : An invalid option was specified. [TUI-204] [_report_timing]
+        : An option named '-unconstrianed' could not be found.
+        : Run 'command_name -help' to check all valid options. To correct the option and rerun the command.
+  _report_timing: prints a timing report 
+
+Usage: _report_timing [-fields <string>] [-output_format <string>] [-path_type <string>]
+           [-split_delay] [-stage_delay] [-hpins] [-nets] [-exception_data] [-unconstrained]
+           [-physical] [-user_derate] [-user_mean_derate] [-user_sigma_derate] [-incr_derate]
+           [-gui] [-max_paths <integer>] [-nworst <integer>] [-logic_levels <integer>]
+           [-skip_buf] [-skip_inv] [-logic_levels_tcl_list] [-max_slack <float>]
+           [-min_slack <float>] [-paths <string>] [-domain <clock_domain>]
+           [-views <analysis_view>+] [-collection]
+           [ -from <inst|hinst|external_delay|clock|port|pin|hpin>+ |
+             -from_rise <inst|hinst|external_delay|clock|port|pin|hpin>+ |
+             -from_fall <inst|hinst|external_delay|clock|port|pin|hpin>+ ]
+           [ -through <inst|hinst|hnet|port|pin|hpin>+ |
+             -through_rise <inst|hinst|hnet|port|pin|hpin>+ |
+             -through_fall <inst|hinst|hnet|port|pin|hpin>+ ]+
+           [ -not_through <inst|hinst|hnet|port|pin|hpin>+ |
+             -not_through_rise <inst|hinst|hnet|port|pin|hpin>+ |
+             -not_through_fall <inst|hinst|hnet|port|pin|hpin>+ ]
+           [ -to <inst|hinst|external_delay|clock|port|pin|hpin>+ |
+             -to_rise <inst|hinst|external_delay|clock|port|pin|hpin>+ |
+             -to_fall <inst|hinst|external_delay|clock|port|pin|hpin>+ ]
+           [ -capture_clock_pins <pin|hpin>+ |
+             -capture_clock_pins_rise_clock <pin|hpin>+ |
+             -capture_clock_pins_fall_clock <pin|hpin>+ |
+             -capture_clock_pins_rise_pin <pin|hpin>+ |
+             -capture_clock_pins_fall_pin <pin|hpin>+ ]
+           [-exceptions <exception>+] [-group <cost_group>+] [-timing_bin <timing_bin>]
+           [-timing_path <timing_bin_path>] [<timing_path>+] [> file]
+
+    [-fields <string>]:
+        fields 
+    [-output_format <string>]:
+        supported output format types are <gtd|text> 
+    [-path_type <string>]:
+        supported path types are <full|summary|full_clock|endpoint> 
+    [-split_delay]:
+        displays both drivers and loads in the data path 
+    [-stage_delay]:
+        displays only drivers in the data path 
+    [-hpins]:
+        displays hierarchical pins in the data path 
+    [-nets]:
+        displays nets in the data path 
+    [-exception_data]:
+        displays the exception cross-linking information 
+    [-unconstrained]:
+        displays the unconstrained paths 
+    [-physical]:
+        include physical information in report 
+    [-user_derate]:
+        show 'user_derate' column in timing reports 
+    [-user_mean_derate]:
+        show 'user_mean_derate' column in timing reports 
+    [-user_sigma_derate]:
+        show 'user_sigma_derate' column in timing reports 
+    [-incr_derate]:
+        show 'incr_derate' column in timing reports 
+    [-gui]:
+        invoke GUI timing report dialog 
+    [-max_paths <integer>]:
+        number of paths 
+    [-nworst <integer>]:
+        number of worst paths to each endpoint (inapplicable to path_type endpoint) 
+    [-logic_levels <integer>]:
+        number of paths to report in the output 
+    [-skip_buf]:
+        skip buffers when computing logic levels 
+    [-skip_inv]:
+        skip inverters when computing logic levels 
+    [-logic_levels_tcl_list]:
+        list output 
+    [-max_slack <float>]:
+        only paths with less than this slack 
+    [-min_slack <float>]:
+        only paths with greater than this slack 
+    [-paths <string>]:
+        a path identifier result from the specify_paths command 
+    [-domain <clock_domain>]:
+        a clock domain the paths should be restricted to 
+    [-views <analysis_view>+]:
+        a view the paths should be restricted to 
+    [-collection]:
+        return a collection of timing paths 
+    -from <inst|hinst|external_delay|clock|port|pin|hpin>+:
+        a set of startpoints for the paths 
+    -from_rise <inst|hinst|external_delay|clock|port|pin|hpin>+:
+        startpoints with a rise transition at the pin itself 
+    -from_fall <inst|hinst|external_delay|clock|port|pin|hpin>+:
+        startpoints with a fall transition at the pin itself 
+    -through <inst|hinst|hnet|port|pin|hpin>+:
+        specifies paths that pass through these pins or instances. This option can be repeated 
+        indicating that the path must go through at least one element of each through list (in 
+        the order the options were specified). Objects must be ports, hierarchical pins, pins 
+        on sequential/mapped combinational cells, or sequential/mapped combinational instances 
+    -through_rise <inst|hinst|hnet|port|pin|hpin>+:
+        this option specifies paths that contain a rise transition in one of these objects and 
+        it can be repeated and can be combined with -through and/or -through_fall_pin 
+    -through_fall <inst|hinst|hnet|port|pin|hpin>+:
+        this option specifies paths that contain a fall transition in one of these objects and 
+        it can be repeated and can be combined with -through and/or -through_rise_pin 
+    -not_through <inst|hinst|hnet|port|pin|hpin>+:
+        specifies paths that do not pass through these pins or instances. Objects must be 
+        ports, hierarchical pins, pins on sequential/mapped combinational cells, or 
+        sequential/mapped combinational instances 
+    -not_through_rise <inst|hinst|hnet|port|pin|hpin>+:
+        this option specifies paths that does not contain a rise transition in one of these 
+        objects 
+    -not_through_fall <inst|hinst|hnet|port|pin|hpin>+:
+        this option specifies paths that does not contain a fall transition in one of these 
+        objects 
+    -to <inst|hinst|external_delay|clock|port|pin|hpin>+:
+        a set of endpoints for the paths 
+    -to_rise <inst|hinst|external_delay|clock|port|pin|hpin>+:
+        endpoints with a rise transition at the pin itself 
+    -to_fall <inst|hinst|external_delay|clock|port|pin|hpin>+:
+        endpoints with a fall transition at the pin itself 
+    -capture_clock_pins <pin|hpin>+:
+        sequential clock pins at the path endpoint 
+    -capture_clock_pins_rise_clock <pin|hpin>+:
+        pins that capture with rising clock edge 
+    -capture_clock_pins_fall_clock <pin|hpin>+:
+        pins that capture with falling clock edge 
+    -capture_clock_pins_rise_pin <pin|hpin>+:
+        pins that capture with rise transition at the pin itself 
+    -capture_clock_pins_fall_pin <pin|hpin>+:
+        pins that capture with fall transition at the pin itself 
+    [-exceptions <exception>+]:
+        report paths for exceptions 
+    [-group <cost_group>+]:
+        report paths for the specified cost groups/path groups 
+    [-timing_bin <timing_bin>]:
+        timing bin to report 
+    [-timing_path <timing_bin_path>]:
+        timing path to report 
+    [<timing_path>+]:
+        path_collection 
+Fields presented are controlled by the '-fields' switch or the attribute
+'timing_report_fields' and 'timing_report_endpoint_fields'
+Valid full report fields are:
+  - timing_point:        names of pins
+  - flags:               flags associated with the column timing_point
+  - arc:                 timing arc for which timing information was applied
+  - edge:                rising/falling edge
+  - cell:                cell type, exception type, etc.
+  - fanout:              fanout of leaf cells
+  - load:                load of leaf cells
+  - transition:          slew of leaf cell outputs
+  - transition_mean:     mean slew of leaf cell outputs
+  - transition_sigma:    sigma slew of leaf cell outputs
+  - delay:               delay through a leaf cell
+  - delay_mean:          mean delay through a leaf cell
+  - delay_sigma:         sigma delay through a leaf cell
+  - arrival:             arrival time at a leaf cell
+  - arrival_mean:        mean arrival time at a leaf cell
+  - arrival_sigma:       sigma arrival time at a leaf cell
+  - lib_set:             display the library set of the cell
+  - user_derate:         derating information
+  - user_mean_derate:    mean derating information
+  - user_sigma_derate:   derating information
+  - total_derate:        total derating information
+  - incr_derate:        incr derating information
+  - aocv_derate:         aocv derating information
+  - socv_derate:         socv spatial derating information
+  - stage_count:         aocv stage depth
+  - power_domain:        power domain associated with the object
+  - wire_length:         wire length
+  - instance_location:       instance location
+  - pin_location:        pin location
+  - module:              name of the subdesign
+  - frc:                 file row column information
+  - voltage:             voltage information
+1
+@genus:root: 20> report timing -unconstrained
+============================================================
+  Generated by:           Genus(TM) Synthesis Solution 21.18-s082_1
+  Generated on:           Dec 05 2024  07:12:03 pm
+  Module:                 Sumador_BK
+  Operating conditions:   typical (balanced_tree)
+  Wireload mode:          enclosed
+  Area mode:              timing library
+============================================================
+
+
+Path 1: UNCONSTRAINED
+     Startpoint: (R) b[0]
+       Endpoint: (R) sum[3]
+
+                   Capture    Launch  
+      Drv Adjust:+       0         0  
+                                      
+       Data Path:-     377            
+
+#---------------------------------------------------------------------------------------
+# Timing Point   Flags   Arc   Edge   Cell     Fanout Load Trans Delay Arrival Instance 
+#                                                     (fF)  (ps)  (ps)   (ps)  Location 
+#---------------------------------------------------------------------------------------
+  b[0]           -       -     R     (arrival)      1  4.6     0     0       0    (-,-) 
+  g216__1617/YS  -       A->YS F     HAX1           1  3.4    18    61      61    (-,-) 
+  g214__6783/YC  -       B->YC F     HAX1           1  2.3    18    48     108    (-,-) 
+  g213__5526/Y   -       A->Y  F     OR2X1          1  3.4    16    43     151    (-,-) 
+  g212__8428/YC  -       B->YC F     HAX1           1  2.3    17    47     198    (-,-) 
+  g211__4319/Y   -       A->Y  F     OR2X1          1  3.4    16    43     241    (-,-) 
+  g210__6260/YC  -       B->YC F     HAX1           1  2.3    17    47     288    (-,-) 
+  g209__5107/Y   -       A->Y  F     OR2X1          2  5.0    20    46     334    (-,-) 
+  g208__2398/Y   -       B->Y  R     XNOR2X1        1  0.0    28    42     377    (-,-) 
+  sum[3]         -       -     R     (port)         -    -     -     0     377    (-,-) 
+#---------------------------------------------------------------------------------------
+
+@genus:root: 21> write_hdl -mapped > Sumador_BBKK.v
+@genus:root: 22> write_sdc > Sumador_BBKK.sdc
+Finished SDC export (command execution time mm:ss (real) = 00:00).
+@genus:root: 23> gui_show
+@genus:root: 24> exit
+
+Lic Summary:
+[19:26:05.456995] Cdslmd servers: ccslvcbasselic
+[19:26:05.457010] Feature usage summary:
+[19:26:05.457010] Genus_Synthesis
+
+Normal exit.

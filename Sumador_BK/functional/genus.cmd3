@@ -1,0 +1,18 @@
+# Cadence Genus(TM) Synthesis Solution, Version 21.18-s082_1, built Jul 18 2023 13:08:41
+
+# Date: Thu Dec 05 18:46:51 2024
+# Host: ccslvcbasselic (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (1core*4cpus*7physical cpus*Intel(R) Xeon(R) Platinum 8268 CPU @ 2.90GHz 36608KB)
+# OS:   CentOS Linux release 7.9.2009 (Core)
+
+read_lib /home/al-labse15/SumadorBrentKung/Sumador_BK/functional/libCompleta.lib
+read_hdl  /home/al-labse15/SumadorBrentKung/Sumador_BK/functional/verilog.v
+elaborate Sumador_BK
+set_db [get_db modules Co_0*] .boundary_opto strict_no
+set_db [get_db modules Co_1*] .boundary_opto strict_no
+syn_gen
+syn_map
+report gates
+report timing
+report timing -unconstrained
+gui_show
+exit

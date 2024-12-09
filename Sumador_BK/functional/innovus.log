@@ -1,0 +1,234 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v20.15-s105_1, built Tue Jul 27 14:15:35 PDT 2021
+Options:	
+Date:		Thu Dec  5 19:48:10 2024
+Host:		ccslvcbasselic (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (1core*4cpus*Intel(R) Xeon(R) Platinum 8268 CPU @ 2.90GHz 36608KB)
+OS:		CentOS Linux release 7.9.2009 (Core)
+
+License:
+		invs	Innovus Implementation System	20.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (15 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+<CMD> define_proc_arguments ViaFillQor -info {This procedure extracts Viafill details from innovus db} -define_args {
+        {-window "window coordinates" "" list optional}
+        {-window_size "window size in microns" "" string optional}
+    
+    }
+[INFO] Loading Pegasus 23.20 fill procedures
+<CMD> define_proc_arguments ProcessFills -info {This procedure processes Fill types} -define_args {
+    {-fillInfo "Design Fill data" "" list required}
+				{-csvName "File path for Fill Data csv file" "Path of CSV file" string required}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list required}
+    {-output_data "Boolean Flag to output Fill Data for further processing" "" string required}
+}
+<CMD> define_proc_arguments FillQor -info {This procedure extracts fill details from innovus db} -define_args {
+    {-layers "Fills Cleanup on which all layers" "list of Metal/Routing layers" list optional}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list optional}
+				{-outData "Boolean Flag to output Fill Data for further processing" "" boolean optional}
+    {-outDataFile "File path for Fill Data csv file" "Path of CSV file" string optional}
+}
+<CMD> define_proc_arguments ProcessFills_fast -info {This procedure processes Fill types} -define_args {
+    {-fillInfo "Design Fill data" "" list required}
+				{-csvName "File path for Fill Data csv file" "Path of CSV file" string required}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list required}
+    {-output_data "Boolean Flag to output Fill Data for further processing" "" string required}
+}
+<CMD> define_proc_arguments FillQor_fast -info {This procedure extracts fill details from innovus db} -define_args {
+    {-layers "Fills Cleanup on which all layers" "list of Metal/Routing layers" list optional}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list optional}
+				{-outData "Boolean Flag to output Fill Data for further processing" "" boolean optional}
+    {-outDataFile "File path for Fill Data csv file" "Path of CSV file" string optional}
+}
+<CMD> define_proc_arguments ProcessFills_fast_stampOnly -info {This procedure processes Fill types} -define_args {
+    {-fillInfo "Design Fill data" "" list required}
+	
+}
+<CMD> define_proc_arguments FillQor_fast_stampOnly -info {This procedure extracts fill details from innovus db} -define_args {
+    {-layers "Fills Cleanup on which all layers" "list of Metal/Routing layers" list optional}
+}
+<CMD> win
+<CMD> set init_gnd_net gnd
+<CMD> set init_lef_file lib/libreria.lef
+<CMD> set init_design_settop 0
+<CMD> set init_verilog synth/Sumador_BBKK.v
+<CMD> set init_pwr_net vdd
+<CMD> init_design
+
+Loading LEF file lib/libreria.lef ...
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_POLY', 
+Set DBUPerIGU to M2 pitch 380.
+
+viaInitial starts at Thu Dec  5 19:53:26 2024
+viaInitial ends at Thu Dec  5 19:53:26 2024
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+*** End library_loading (cpu=0.00min, real=0.00min, mem=0.0M, fe_cpu=0.70min, fe_real=5.27min, fe_mem=841.9M) ***
+#% Begin Load netlist data ... (date=12/05 19:53:26, mem=638.1M)
+*** Begin netlist parsing (mem=841.9M) ***
+Created 0 new cells from 0 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist 'synth/Sumador_BBKK.v'
+
+*** Memory Usage v#1 (Current mem = 842.871M, initial mem = 292.363M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=842.9M) ***
+#% End Load netlist data ... (date=12/05 19:53:26, total cpu=0:00:00.0, real=0:00:00.0, peak res=641.4M, current mem=641.4M)
+Top level cell is Sumador_BK.
+Hooked 0 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell Sumador_BK ...
+*** Netlist is unique.
+Set DBUPerIGU to techSite CoreSite width 760.
+** info: there are 34 modules.
+** info: there are 11 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 881.297M, initial mem = 292.363M) ***
+Horizontal Layer M1 offset = 190 (guessed)
+Vertical Layer M2 offset = 190 (guessed)
+Suggestion: specify LAYER OFFSET in LEF file
+Reason: hard to extract LAYER OFFSET from standard cells
+Start create_tracks
+Generated pitch 1.68 in metal10 is different from 1.71 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal8 is different from 0.855 defined in technology file in preferred direction.
+Generated pitch 0.95 in metal7 is different from 0.855 defined in technology file in preferred direction.
+Generated pitch 0.28 in metal6 is different from 0.285 defined in technology file in preferred direction.
+Generated pitch 0.28 in metal4 is different from 0.285 defined in technology file in preferred direction.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+**WARN: (IMPSYT-7328):	The design has been initialized in physical-only mode because the init_mmmc_file global variable was not defined. Timing analysis will not be possible within this session. You can only use commands that do not depend on timing data. If you need to use timing, you need to restart with an init_mmmc_file to define the timing setup, or you can save this design and use restoreDesign -mmmc_file <viewDef.tcl> to add the timing setup information.
+Extraction setup Started 
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPLF-155            1  ViaRule only supports routing/cut layer,...
+WARNING   IMPSYT-7328          1  The design has been initialized in physi...
+*** Message Summary: 2 warning(s), 0 error(s)
+
+<CMD> saveDesign Sumador_BK
+#% Begin save design ... (date=12/05 19:55:10, mem=880.2M)
+% Begin Save ccopt configuration ... (date=12/05 19:55:10, mem=883.3M)
+% End Save ccopt configuration ... (date=12/05 19:55:10, total cpu=0:00:00.0, real=0:00:00.0, peak res=884.1M, current mem=884.1M)
+% Begin Save netlist data ... (date=12/05 19:55:10, mem=903.9M)
+Writing Binary DB to Sumador_BK.dat/Sumador_BK.v.bin in single-threaded mode...
+% End Save netlist data ... (date=12/05 19:55:10, total cpu=0:00:00.0, real=0:00:00.0, peak res=904.0M, current mem=904.0M)
+Saving symbol-table file ...
+Saving congestion map file Sumador_BK.dat/Sumador_BK.route.congmap.gz ...
+% Begin Save AAE data ... (date=12/05 19:55:10, mem=904.6M)
+Saving AAE Data ...
+% End Save AAE data ... (date=12/05 19:55:10, total cpu=0:00:00.0, real=0:00:00.0, peak res=904.6M, current mem=904.6M)
+Saving preference file Sumador_BK.dat/gui.pref.tcl ...
+Saving mode setting ...
+Saving global file ...
+% Begin Save floorplan data ... (date=12/05 19:55:10, mem=905.3M)
+Saving floorplan file ...
+% End Save floorplan data ... (date=12/05 19:55:10, total cpu=0:00:00.0, real=0:00:01.0, peak res=906.0M, current mem=906.0M)
+Saving Drc markers ...
+... No Drc file written since there is no markers found.
+% Begin Save placement data ... (date=12/05 19:55:11, mem=906.1M)
+** Saving stdCellPlacement_binary (version# 2) ...
+Save Adaptive View Pruning View Names to Binary file
+% End Save placement data ... (date=12/05 19:55:11, total cpu=0:00:00.0, real=0:00:00.0, peak res=906.3M, current mem=906.3M)
+% Begin Save routing data ... (date=12/05 19:55:11, mem=906.3M)
+Saving route file ...
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=1129.6M) ***
+% End Save routing data ... (date=12/05 19:55:11, total cpu=0:00:00.0, real=0:00:00.0, peak res=906.5M, current mem=906.5M)
+Saving property file Sumador_BK.dat/Sumador_BK.prop
+*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1132.6M) ***
+% Begin Save power constraints data ... (date=12/05 19:55:11, mem=907.1M)
+% End Save power constraints data ... (date=12/05 19:55:11, total cpu=0:00:00.0, real=0:00:00.0, peak res=907.2M, current mem=907.2M)
+Generated self-contained design Sumador_BK.dat
+#% End save design ... (date=12/05 19:55:11, total cpu=0:00:00.3, real=0:00:01.0, peak res=908.4M, current mem=908.4M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+<CMD> saveDesign Sumador_BK
+#% Begin save design ... (date=12/05 19:55:11, mem=908.4M)
+% Begin Save ccopt configuration ... (date=12/05 19:55:11, mem=908.4M)
+% End Save ccopt configuration ... (date=12/05 19:55:11, total cpu=0:00:00.0, real=0:00:00.0, peak res=908.4M, current mem=908.4M)
+% Begin Save netlist data ... (date=12/05 19:55:11, mem=908.4M)
+Writing Binary DB to Sumador_BK.dat.tmp/Sumador_BK.v.bin in single-threaded mode...
+% End Save netlist data ... (date=12/05 19:55:11, total cpu=0:00:00.0, real=0:00:00.0, peak res=908.4M, current mem=908.4M)
+Saving symbol-table file ...
+Saving congestion map file Sumador_BK.dat.tmp/Sumador_BK.route.congmap.gz ...
+% Begin Save AAE data ... (date=12/05 19:55:11, mem=908.4M)
+Saving AAE Data ...
+% End Save AAE data ... (date=12/05 19:55:11, total cpu=0:00:00.0, real=0:00:00.0, peak res=908.4M, current mem=908.4M)
+Saving preference file Sumador_BK.dat.tmp/gui.pref.tcl ...
+Saving mode setting ...
+Saving global file ...
+% Begin Save floorplan data ... (date=12/05 19:55:11, mem=908.4M)
+Saving floorplan file ...
+% End Save floorplan data ... (date=12/05 19:55:11, total cpu=0:00:00.0, real=0:00:00.0, peak res=908.4M, current mem=908.4M)
+Saving Drc markers ...
+... No Drc file written since there is no markers found.
+% Begin Save placement data ... (date=12/05 19:55:11, mem=908.4M)
+** Saving stdCellPlacement_binary (version# 2) ...
+Save Adaptive View Pruning View Names to Binary file
+% End Save placement data ... (date=12/05 19:55:11, total cpu=0:00:00.0, real=0:00:00.0, peak res=908.4M, current mem=908.4M)
+% Begin Save routing data ... (date=12/05 19:55:11, mem=908.4M)
+Saving route file ...
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=1132.7M) ***
+% End Save routing data ... (date=12/05 19:55:11, total cpu=0:00:00.0, real=0:00:00.0, peak res=909.5M, current mem=908.5M)
+Saving property file Sumador_BK.dat.tmp/Sumador_BK.prop
+*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1135.7M) ***
+% Begin Save power constraints data ... (date=12/05 19:55:12, mem=908.5M)
+% End Save power constraints data ... (date=12/05 19:55:12, total cpu=0:00:00.0, real=0:00:00.0, peak res=908.5M, current mem=908.5M)
+Generated self-contained design Sumador_BK.dat.tmp
+#% End save design ... (date=12/05 19:55:12, total cpu=0:00:00.3, real=0:00:01.0, peak res=909.6M, current mem=908.8M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+<CMD> saveDesign Sumador_BK
+#% Begin save design ... (date=12/05 19:55:12, mem=908.8M)
+% Begin Save ccopt configuration ... (date=12/05 19:55:12, mem=908.8M)
+% End Save ccopt configuration ... (date=12/05 19:55:12, total cpu=0:00:00.0, real=0:00:00.0, peak res=908.8M, current mem=908.8M)
+% Begin Save netlist data ... (date=12/05 19:55:12, mem=908.8M)
+Writing Binary DB to Sumador_BK.dat.tmp/Sumador_BK.v.bin in single-threaded mode...
+% End Save netlist data ... (date=12/05 19:55:12, total cpu=0:00:00.0, real=0:00:00.0, peak res=908.8M, current mem=908.8M)
+Saving symbol-table file ...
+Saving congestion map file Sumador_BK.dat.tmp/Sumador_BK.route.congmap.gz ...
+% Begin Save AAE data ... (date=12/05 19:55:12, mem=908.8M)
+Saving AAE Data ...
+% End Save AAE data ... (date=12/05 19:55:12, total cpu=0:00:00.0, real=0:00:00.0, peak res=908.8M, current mem=908.8M)
+Saving preference file Sumador_BK.dat.tmp/gui.pref.tcl ...
+Saving mode setting ...
+Saving global file ...
+% Begin Save floorplan data ... (date=12/05 19:55:12, mem=908.8M)
+Saving floorplan file ...
+% End Save floorplan data ... (date=12/05 19:55:12, total cpu=0:00:00.0, real=0:00:00.0, peak res=908.8M, current mem=908.8M)
+Saving Drc markers ...
+... No Drc file written since there is no markers found.
+% Begin Save placement data ... (date=12/05 19:55:12, mem=908.8M)
+** Saving stdCellPlacement_binary (version# 2) ...
+Save Adaptive View Pruning View Names to Binary file
+% End Save placement data ... (date=12/05 19:55:12, total cpu=0:00:00.0, real=0:00:00.0, peak res=908.8M, current mem=908.8M)
+% Begin Save routing data ... (date=12/05 19:55:12, mem=908.8M)
+Saving route file ...
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=1133.8M) ***
+% End Save routing data ... (date=12/05 19:55:12, total cpu=0:00:00.0, real=0:00:00.0, peak res=909.8M, current mem=908.8M)
+Saving property file Sumador_BK.dat.tmp/Sumador_BK.prop
+*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1136.8M) ***
+% Begin Save power constraints data ... (date=12/05 19:55:12, mem=908.8M)
+% End Save power constraints data ... (date=12/05 19:55:12, total cpu=0:00:00.0, real=0:00:00.0, peak res=908.8M, current mem=908.8M)
+Generated self-contained design Sumador_BK.dat.tmp
+#% End save design ... (date=12/05 19:55:12, total cpu=0:00:00.3, real=0:00:00.0, peak res=909.8M, current mem=908.8M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+**INFO (INTERRUPT): One more Ctrl-C to exit Innovus ...
+Innovus terminated by user interrupt.
+
+*** Memory Usage v#1 (Current mem = 1147.375M, initial mem = 292.363M) ***
+*** Message Summary: 2 warning(s), 0 error(s)
+
+--- Ending "Innovus" (totcpu=0:01:08, real=0:09:21, mem=1147.4M) ---

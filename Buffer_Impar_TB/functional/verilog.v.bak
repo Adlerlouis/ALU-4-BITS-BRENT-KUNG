@@ -1,0 +1,12 @@
+//Verilog HDL for "SumadorBrentKung", "Buffer_TB" "functional"
+
+
+module Buffer_TB ();
+	reg in;
+	wire out;
+
+	Buffer uut(in, out);
+
+	initial begin
+
+endmodule

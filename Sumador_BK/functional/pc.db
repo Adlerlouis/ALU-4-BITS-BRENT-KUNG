@@ -1,0 +1,79 @@
+--pcdbVlog file, Rev:1.0
+
+#CELL
+* Black_Cell_Impar *
+BC3
+BC7
+BC5
+
+#CELL
+* Buffer_Impar *
+buffer1_2
+buffer7
+buffer6_5
+buffer6_4
+buffer6_3
+buffer6_2
+buffer6
+buffer5_4
+buffer5_3
+buffer5_2
+buffer5
+buffer4_5
+buffer4_4
+buffer4_3
+buffer4_2
+buffer4
+buffer3_2
+buffer3
+buffer2_5
+buffer2_4
+buffer2_3
+buffer2_2
+buffer2
+
+#CELL
+* Estructura_Final *
+EF0
+EF7
+EF6
+EF5
+EF4
+EF3
+EF2
+EF1
+
+#CELL
+* Gray_Cell_Par *
+GC3
+GC5
+
+#CELL
+* Black_Cell_Par *
+BC7_2
+
+#CELL
+* HalfAdder *
+EI1
+EI8
+EI7
+EI6
+EI5
+EI4
+EI3
+EI2
+
+#CELL
+* Gray_Cell_Impar *
+GC1
+GC7
+GC6
+GC4
+GC2
+
+#CELL
+* Buffer_Par *
+buffer0
+buffer5_6
+buffer1
+
